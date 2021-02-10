@@ -1,0 +1,656 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>README</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Resources/katex.css">
+    <link rel="stylesheet" href="./Resources/katex.css">
+
+</head>
+<body for="html-export">
+    <div class="mume markdown-preview  ">
+        <h1 class="mume-header undefined" id="tsqlt-tools">TSQLt Tools</h1>
+        <ul>
+            <li>
+                <a href="#overview">Overview</a>
+            </li>
+            <li>
+                <a href="#dependencies">Dependencies</a>
+            </li>
+            <li>
+                <a href="#setup">Setup</a>
+            </li>
+            <li>
+                <a href="#quick-use">Quick Use</a>
+                <ul>
+                    <li>
+                        <a href="#new-solution">New Solution</a>
+                    </li>
+                    <li>
+                        <a href="#add-to-existing-projects">Add to Existing Projects</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#description">Description</a>
+                <ul>
+                    <li>
+                        <a href="#what-is-tsqlt">What is TSQLt</a>
+                    </li>
+                    <li>
+                        <a href="#tsqlt-test-adapter">TSQLt Test Adapter</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#configuring-a-database-solution">Configuring a Database Solution</a>
+            </li>
+            <li>
+                <a href="#appendix">Appendix</a>
+            </li>
+        </ul>
+        <h2 class="mume-header" id="overview">Overview</h2>
+        <p>
+            Just a few tools to make using <a href="https://tsqlt.org">TSQLt </a>
+            easier for database unit tests in Visual Studio SQL Projects. The Goal is to make SQL unit testing as much like C# just in TSQL. No GUI with code behind and clicking just code.
+        </p>
+        <p>This allow the developer isolation to test any structural change to tables or refactor to stored procedures for correctness before committing code.</p>
+        <h2 class="mume-header" id="dependencies">Dependencies</h2>
+        <ul>
+            <li>Visual Studio 2017/2019 (VS)</li>
+            <li>LocalDB (part of must VS installs)</li>
+            <li>TSQLt Test Runner Adapter  by Ed Elliott</li>
+        </ul>
+        <h2 class="mume-header" id="setup">Setup</h2>
+        <ol>
+            <li>add the local extension feed to visual studio</li>
+            <li>install the extension &quot;SSDT Unit Test &quot;</li>
+        </ol>
+        <h2 class="mume-header" id="quick-use">Quick Use</h2>
+        <h3 class="mume-header" id="new-solution">New Solution</h3>
+        <ol>
+            <li>File &gt;New Solution &gt;SQL &gt;TSQLt Solution</li>
+        </ol>
+        <h3 class="mume-header" id="add-to-existing-projects">Add to Existing Projects</h3>
+        <ol>
+            <li>
+                <p>Solution &gt;Add Project &gt;SQL &gt;Unit Test &gt;TSQLt</p>
+            </li>
+            <li>
+                <p>
+                    Name &quot;<em>SomeProject</em>
+                    .Test &quot;
+                </p>
+            </li>
+            <li>
+                <p>
+                    &quot;<em>SomeProject</em>
+                    &quot;&gt;References &gt;right-click &gt;add &quot;Database Reference &quot;
+                </p>
+            </li>
+            <li>
+                <p>In Projects</p>
+                <ul>
+                    <li>
+                        Base project (&quot;<em>SomeProject</em>
+                        &quot;)
+                    </li>
+                    <li>&quot;Same Server, Same Database &quot;</li>
+                </ul>
+            </li>
+            <li>
+                <p>
+                    as needed &quot;<em>SomeProject</em>
+                    &quot;&gt;database Item &gt;Add Unit test
+                </p>
+            </li>
+        </ol>
+        <h2 class="mume-header" id="description">Description</h2>
+        <p>
+            Just a few tools to make using <a href="https://tsqlt.org">TSQLt </a>
+            easier for database unit tests in Visual Studio SQL Projects. The Goal is to make SQL unit testing as much like C# just in TSQL. No GUI with code behind and clicking just code.
+        </p>
+        <p>This allow the developer isolation to test any structural change to tables or refactor to stored procedures for correctness before committing code.</p>
+        <p>This plugin helps us consistently develop database and improve database project quality wit:</p>
+        <ul>
+            <li>
+                Visual Studio Templates
+
+                <ul>
+                    <li>Solution</li>
+                    <li>Project</li>
+                    <li>Project Items</li>
+                </ul>
+            </li>
+            <li>
+                External requirements
+
+                <ul>
+                    <li>LocalDB (for unit testing)</li>
+                    <li>TSQL Rules (Static code analysis library)</li>
+                    <li>
+                        <code>TSQLt Test Runner Adapter</code>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3 class="mume-header" id="what-is-tsqlt">What is TSQLt</h3>
+        <p>TSQL is a SQL Server CLR (database plug-in) that adds a unit testing framework to SQL Server database. This includes, but not limited to:</p>
+        <ul>
+            <li>Isolating Dependencies (Mocking)</li>
+            <li>Assertions</li>
+            <li>Expectations</li>
+        </ul>
+        <p>All of this has been bundled up into a database reference (.dacpack file) and the unit testing can be added to you current database solution as a separate SQL Project.</p>
+        <p>
+            <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+            <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="263px" preserveAspectRatio="none" style="width:343px;height:263px;" version="1.1" viewBox="0 0 343 263" width="343px" zoomAndPan="magnify">
+                <defs>
+                    <filter height="300%" id="f1ns19mrav0n48" width="300%" x="-1" y="-1">
+                        <feGaussianBlur result="blurOut" stdDeviation="2.0" />
+                        <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" />
+                        <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3" />
+                        <feBlend in="SourceGraphic" in2="blurOut3" mode="normal" />
+                    </filter>
+                </defs>
+                <g>
+                    <!--MD5=[b45a05941006e48f430979f579b629e5]
+                    cluster tsqlt.dacpack-->
+                    <polygon fill="#FFFFFF" filter="url(#f1ns19mrav0n48)" points="22,34,32,24,321,24,321,241,311,251,22,251,22,34" style="stroke: #000000; stroke-width: 1.5;" />
+                    <line style="stroke: #000000; stroke-width: 1.5;" x1="311" x2="320" y1="34" y2="25" />
+                    <line style="stroke: #000000; stroke-width: 1.5;" x1="22" x2="311" y1="34" y2="34" />
+                    <line style="stroke: #000000; stroke-width: 1.5;" x1="311" x2="311" y1="34" y2="251" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="93" x="121" y="51.5332">tsqlt.dacpack</text>
+                    <!--MD5=[06d65b0f1c20942e5812af5ca2de4da7]
+                    entity tSQLtCLR.dll-->
+                    <rect fill="#FEFECE" filter="url(#f1ns19mrav0n48)" height="55.2188" style="stroke: #000000; stroke-width: 1.5;" width="102" x="38" y="65" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="44" x="67" y="89.5332">&#xAB;CLR &#xBB;</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="82" x="48" y="107.1426">tSQLtCLR.dll</text>
+                    <!--MD5=[6829b5ffe902055e8f100bd684bcc36f]
+                    entity ExpectSomething-->
+                    <rect fill="#FEFECE" filter="url(#f1ns19mrav0n48)" height="55.2188" style="stroke: #000000; stroke-width: 1.5;" width="129" x="175.5" y="65" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="87" x="196.5" y="89.5332">&#xAB;StoredProc &#xBB;</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="109" x="185.5" y="107.1426">ExpectSomething</text>
+                    <!--MD5=[58aa51a8bbe6d331c1b9a17d37c860ce]
+                    entity MockSomething-->
+                    <rect fill="#FEFECE" filter="url(#f1ns19mrav0n48)" height="55.2188" style="stroke: #000000; stroke-width: 1.5;" width="120" x="38" y="180" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="87" x="54.5" y="204.5332">&#xAB;StoredProc &#xBB;</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="100" x="48" y="222.1426">MockSomething</text>
+                    <!--MD5=[6631af3e2339b8e8ef037feb854f398f]
+                    link tSQLtCLR.dll to ExpectSomething-->
+                    <!--MD5=[e598b2f170af66783ed5d57f1aafe05f]
+                    link tSQLtCLR.dll to MockSomething-->
+                    <!--MD5=[41b6f8a46ef3c2af78694968a505be18]
+                    @startuml
+                    node "tsqlt.dacpack"{
+                                rectangle "tSQLtCLR.dll" <<CLR>>
+                                rectangle "ExpectSomething" <<StoredProc>>
+                                rectangle "MockSomething" <<StoredProc>>
+                        }
+                    @enduml
+
+                    PlantUML version 1.2019.11(Sun Sep 22 05:02:15 CDT 2019)
+                    (MIT source distribution)
+                    Java Runtime: Java(TM) SE Runtime Environment
+                    JVM: Java HotSpot(TM) Client VM
+                    Java Version: 1.8.0_201-b09
+                    Operating System: Windows 10
+                    Default Encoding: Cp1252
+                    Language: en
+                    Country: US
+                    -->
+                </g>
+            </svg>
+        </p>
+        <h3 class="mume-header" id="tsqlt-test-adapter">TSQLt Test Adapter</h3>
+        <p>To Perform database unit test with TSQLT we need Visual Studio to do the following:</p>
+        <ol>
+            <li>Visual Studio can create the project database, with all developer changes</li>
+            <li>Pulish to a database</li>
+            <li>
+                Run unit tests <em>in the database as queries</em>
+            </li>
+            <li>returned the result and displayed in query explorer.</li>
+        </ol>
+        <p>
+            Steps #1, #2 and #4 are part of Visual Studio. Step #3 is implemented by <code>TSQLt Test Runner Adapter by Ed Elliott</code>
+            .
+        </p>
+        <p>The extension provides the following:</p>
+        <ul>
+            <li>enumerates the test classes and tests in a Solution</li>
+            <li>collects and results from the invoked sql stored procedures</li>
+        </ul>
+        <p>
+            <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+            <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="499px" preserveAspectRatio="none" style="width:590px;height:499px;" version="1.1" viewBox="0 0 590 499" width="590px" zoomAndPan="magnify">
+                <defs>
+                    <filter height="300%" id="fbrfwo0j1xny" width="300%" x="-1" y="-1">
+                        <feGaussianBlur result="blurOut" stdDeviation="2.0" />
+                        <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" />
+                        <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3" />
+                        <feBlend in="SourceGraphic" in2="blurOut3" mode="normal" />
+                    </filter>
+                </defs>
+                <g>
+                    <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="45" x2="45" y1="87.6094" y2="411.125" />
+                    <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="142.5" x2="142.5" y1="87.6094" y2="411.125" />
+                    <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="327.5" x2="327.5" y1="87.6094" y2="411.125" />
+                    <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="470.5" x2="470.5" y1="87.6094" y2="411.125" />
+                    <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="557.5" x2="557.5" y1="87.6094" y2="411.125" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="69" x="8" y="84.5332">:Developer</text>
+                    <ellipse cx="45.5" cy="13" fill="#FEFECE" filter="url(#fbrfwo0j1xny)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;" />
+                    <path d="M45.5,21 L45.5,48 M32.5,29 L58.5,29 M45.5,48 L32.5,63 M45.5,48 L58.5,63 " fill="none" filter="url(#fbrfwo0j1xny)" style="stroke: #A80036; stroke-width: 2.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="69" x="8" y="424.6582">:Developer</text>
+                    <ellipse cx="45.5" cy="437.7344" fill="#FEFECE" filter="url(#fbrfwo0j1xny)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;" />
+                    <path d="M45.5,445.7344 L45.5,472.7344 M32.5,453.7344 L58.5,453.7344 M45.5,472.7344 L32.5,487.7344 M45.5,472.7344 L58.5,487.7344 " fill="none" filter="url(#fbrfwo0j1xny)" style="stroke: #A80036; stroke-width: 2.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="82" x="98.5" y="84.5332">Visual Studio</text>
+                    <path d="M122,42 L122,66 M122,54 L139,54 " fill="none" filter="url(#fbrfwo0j1xny)" style="stroke: #A80036; stroke-width: 2.0;" />
+                    <ellipse cx="151" cy="54" fill="#FEFECE" filter="url(#fbrfwo0j1xny)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="82" x="98.5" y="424.6582">Visual Studio</text>
+                    <path d="M122,431.7344 L122,455.7344 M122,443.7344 L139,443.7344 " fill="none" filter="url(#fbrfwo0j1xny)" style="stroke: #A80036; stroke-width: 2.0;" />
+                    <ellipse cx="151" cy="443.7344" fill="#FEFECE" filter="url(#fbrfwo0j1xny)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="110" x="269.5" y="84.5332">Unit Test Adapter</text>
+                    <ellipse cx="327.5" cy="54" fill="#FEFECE" filter="url(#fbrfwo0j1xny)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;" />
+                    <polygon fill="#A80036" points="323.5,42,329.5,37,327.5,42,329.5,47,323.5,42" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="110" x="269.5" y="424.6582">Unit Test Adapter</text>
+                    <ellipse cx="327.5" cy="443.7344" fill="#FEFECE" filter="url(#fbrfwo0j1xny)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;" />
+                    <polygon fill="#A80036" points="323.5,431.7344,329.5,426.7344,327.5,431.7344,329.5,436.7344,323.5,431.7344" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <rect fill="#FEFECE" filter="url(#fbrfwo0j1xny)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="92" x="424.5" y="47" />
+                    <rect fill="#FEFECE" filter="url(#fbrfwo0j1xny)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="92" x="420.5" y="51" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="78" x="427.5" y="72.5332">Project Files</text>
+                    <rect fill="#FEFECE" filter="url(#fbrfwo0j1xny)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="92" x="424.5" y="410.125" />
+                    <rect fill="#FEFECE" filter="url(#fbrfwo0j1xny)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="92" x="420.5" y="414.125" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="78" x="427.5" y="435.6582">Project Files</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="48" x="530.5" y="84.5332">localDB</text>
+                    <path d="M539.5,34 C539.5,24 557.5,24 557.5,24 C557.5,24 575.5,24 575.5,34 L575.5,60 C575.5,70 557.5,70 557.5,70 C557.5,70 539.5,70 539.5,60 L539.5,34 " fill="#FEFECE" filter="url(#fbrfwo0j1xny)" style="stroke: #000000; stroke-width: 1.5;" />
+                    <path d="M539.5,34 C539.5,44 557.5,44 557.5,44 C557.5,44 575.5,44 575.5,34 " fill="none" style="stroke: #000000; stroke-width: 1.5;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="48" x="530.5" y="424.6582">localDB</text>
+                    <path d="M539.5,437.7344 C539.5,427.7344 557.5,427.7344 557.5,427.7344 C557.5,427.7344 575.5,427.7344 575.5,437.7344 L575.5,463.7344 C575.5,473.7344 557.5,473.7344 557.5,473.7344 C557.5,473.7344 539.5,473.7344 539.5,463.7344 L539.5,437.7344 " fill="#FEFECE" filter="url(#fbrfwo0j1xny)" style="stroke: #000000; stroke-width: 1.5;" />
+                    <path d="M539.5,437.7344 C539.5,447.7344 557.5,447.7344 557.5,447.7344 C557.5,447.7344 575.5,447.7344 575.5,437.7344 " fill="none" style="stroke: #000000; stroke-width: 1.5;" />
+                    <polygon fill="#A80036" points="130.5,115.9609,140.5,119.9609,130.5,123.9609,134.5,119.9609" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <line style="stroke: #A80036; stroke-width: 1.0;" x1="45.5" x2="136.5" y1="119.9609" y2="119.9609" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="29" x="52.5" y="115.1045">Build</text>
+                    <polygon fill="#A80036" points="458.5,146.3125,468.5,150.3125,458.5,154.3125,462.5,150.3125" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <line style="stroke: #A80036; stroke-width: 1.0;" x1="142.5" x2="464.5" y1="150.3125" y2="150.3125" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="34" x="149.5" y="145.4561">Parse</text>
+                    <polygon fill="#A80036" points="130.5,176.6641,140.5,180.6641,130.5,184.6641,134.5,180.6641" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <line style="stroke: #A80036; stroke-width: 1.0;" x1="45.5" x2="136.5" y1="180.6641" y2="180.6641" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="43" x="52.5" y="175.8076">Publish</text>
+                    <polygon fill="#A80036" points="545.5,207.0156,555.5,211.0156,545.5,215.0156,549.5,211.0156" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <line style="stroke: #A80036; stroke-width: 1.0;" x1="142.5" x2="551.5" y1="211.0156" y2="211.0156" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="93" x="149.5" y="206.1592">create database</text>
+                    <polygon fill="#A80036" points="130.5,237.3672,140.5,241.3672,130.5,245.3672,134.5,241.3672" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <line style="stroke: #A80036; stroke-width: 1.0;" x1="45.5" x2="136.5" y1="241.3672" y2="241.3672" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="73" x="52.5" y="236.5107">Run all tests</text>
+                    <polygon fill="#A80036" points="315.5,267.7188,325.5,271.7188,315.5,275.7188,319.5,271.7188" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <line style="stroke: #A80036; stroke-width: 1.0;" x1="142.5" x2="321.5" y1="271.7188" y2="271.7188" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="128" x="149.5" y="266.8623">Enumerate test suites</text>
+                    <polygon fill="#A80036" points="458.5,298.0703,468.5,302.0703,458.5,306.0703,462.5,302.0703" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <line style="stroke: #A80036; stroke-width: 1.0;" x1="327.5" x2="464.5" y1="302.0703" y2="302.0703" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="119" x="334.5" y="297.2139">scan for TSQL Tests</text>
+                    <polygon fill="#A80036" points="315.5,328.4219,325.5,332.4219,315.5,336.4219,319.5,332.4219" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <line style="stroke: #A80036; stroke-width: 1.0;" x1="142.5" x2="321.5" y1="332.4219" y2="332.4219" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="161" x="149.5" y="327.5654">Enumerate tests in test suit</text>
+                    <polygon fill="#A80036" points="315.5,358.7734,325.5,362.7734,315.5,366.7734,319.5,362.7734" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <line style="stroke: #A80036; stroke-width: 1.0;" x1="142.5" x2="321.5" y1="362.7734" y2="362.7734" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="64" x="149.5" y="357.917">Run Suite1</text>
+                    <polygon fill="#A80036" points="545.5,389.125,555.5,393.125,545.5,397.125,549.5,393.125" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <line style="stroke: #A80036; stroke-width: 1.0;" x1="327.5" x2="551.5" y1="393.125" y2="393.125" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="154" x="334.5" y="388.2686">exec Suite1.[Run all tests]</text>
+                    <!--MD5=[479254fcee289b9f982aa81156cce3c2]
+                    @startuml
+                    actor ":Developer" as user
+                        boundary "Visual Studio" as vs
+                        control "Unit Test Adapter" as test
+                        collections "Project Files" as files
+                        database "localDB" as db
+
+                        user -> vs : Build
+                        vs -> files: Parse
+                        user -> vs : Publish
+                        vs -> db : create database
+
+                        user -> vs: Run all tests
+                        vs -> test: Enumerate test suites
+                        test -> files: scan for TSQL Tests
+                        vs -> test: Enumerate tests in test suit
+
+                        vs-> test: Run Suite1
+                        test -> db: exec Suite1.[Run all tests]
+                    @enduml
+
+                    PlantUML version 1.2019.11(Sun Sep 22 05:02:15 CDT 2019)
+                    (MIT source distribution)
+                    Java Runtime: Java(TM) SE Runtime Environment
+                    JVM: Java HotSpot(TM) Client VM
+                    Java Version: 1.8.0_201-b09
+                    Operating System: Windows 10
+                    Default Encoding: Cp1252
+                    Language: en
+                    Country: US
+                    -->
+                </g>
+            </svg>
+        </p>
+        <p>It is important to remember that:</p>
+        <ul>
+            <li>
+                tests are <strong>enumerated</strong>
+                from the source code and are current as of the last <em>save</em>
+            </li>
+            <li>
+                test are <strong>run</strong>
+                from the database and are current as of the last <em>publish</em>
+            </li>
+        </ul>
+        <h2 class="mume-header" id="configuring-a-database-solution">Configuring a Database Solution</h2>
+        <p>
+            The diagram below illustrates the logical decencies SQL Project <code>SomeProject.Test</code>
+            has on <code>SomeProject</code>
+            and <code>TSQLt</code>
+            .
+        </p>
+        <p>
+            <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+            <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="324px" preserveAspectRatio="none" style="width:274px;height:324px;" version="1.1" viewBox="0 0 274 324" width="274px" zoomAndPan="magnify">
+                <defs>
+                    <filter height="300%" id="f14b4h5xx80vuw" width="300%" x="-1" y="-1">
+                        <feGaussianBlur result="blurOut" stdDeviation="2.0" />
+                        <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" />
+                        <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3" />
+                        <feBlend in="SourceGraphic" in2="blurOut3" mode="normal" />
+                    </filter>
+                </defs>
+                <g>
+                    <!--MD5=[7250a7eff02f61f856d26e39edc9cbc4]
+                    entity tsqlt-->
+                    <path d="M141.5,151 C141.5,141 172,141 172,141 C172,141 202.5,141 202.5,151 L202.5,177.6094 C202.5,187.6094 172,187.6094 172,187.6094 C172,187.6094 141.5,187.6094 141.5,177.6094 L141.5,151 " fill="#FEFECE" filter="url(#f14b4h5xx80vuw)" style="stroke: #000000; stroke-width: 1.5;" />
+                    <path d="M141.5,151 C141.5,161 172,161 172,161 C172,161 202.5,161 202.5,151 " fill="none" style="stroke: #000000; stroke-width: 1.5;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="41" x="151.5" y="179.5332">TSQLt</text>
+                    <!--MD5=[ef2f3d6815c792d082a7c132eb1ade2f]
+                    entity sys-->
+                    <path d="M55.5,22 C55.5,12 87,12 87,12 C87,12 118.5,12 118.5,22 L118.5,48.6094 C118.5,58.6094 87,58.6094 87,58.6094 C87,58.6094 55.5,58.6094 55.5,48.6094 L55.5,22 " fill="#FEFECE" filter="url(#f14b4h5xx80vuw)" style="stroke: #000000; stroke-width: 1.5;" />
+                    <path d="M55.5,22 C55.5,32 87,32 87,32 C87,32 118.5,32 118.5,22 " fill="none" style="stroke: #000000; stroke-width: 1.5;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="43" x="65.5" y="50.5332">Master</text>
+                    <!--MD5=[78b2208db04e25684086b88756c99eb1]
+                    entity proj-->
+                    <path d="M6,151 C6,141 56,141 56,141 C56,141 106,141 106,151 L106,177.6094 C106,187.6094 56,187.6094 56,187.6094 C56,187.6094 6,187.6094 6,177.6094 L6,151 " fill="#FEFECE" filter="url(#f14b4h5xx80vuw)" style="stroke: #000000; stroke-width: 1.5;" />
+                    <path d="M6,151 C6,161 56,161 56,161 C56,161 106,161 106,151 " fill="none" style="stroke: #000000; stroke-width: 1.5;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="80" x="16" y="179.5332">SomeProject</text>
+                    <!--MD5=[d3dac679b1e8583df0e4104897d7ce0a]
+                    entity test-->
+                    <path d="M52.5,276 C52.5,266 116,266 116,266 C116,266 179.5,266 179.5,276 L179.5,302.6094 C179.5,312.6094 116,312.6094 116,312.6094 C116,312.6094 52.5,312.6094 52.5,302.6094 L52.5,276 " fill="#FEFECE" filter="url(#f14b4h5xx80vuw)" style="stroke: #000000; stroke-width: 1.5;" />
+                    <path d="M52.5,276 C52.5,286 116,286 116,286 C116,286 179.5,286 179.5,276 " fill="none" style="stroke: #000000; stroke-width: 1.5;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="80" x="62.5" y="304.5332">SomeProject</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="27" x="142.5" y="304.5332">.test</text>
+                    <!--MD5=[6b513d952e6cf5cc91948467d409a9fc]
+                    entity clr-->
+                    <rect fill="#FEFECE" filter="url(#f14b4h5xx80vuw)" height="55.2188" style="stroke: #000000; stroke-width: 1.5;" width="79" x="184.5" y="8" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="44" x="202" y="32.5332">&#xAB;CLR &#xBB;</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="59" x="194.5" y="50.1426">TSQLt.dll</text>
+                    <!--MD5=[364426c06e407c9b8fcb2ad4a2bd029e]
+                    reverse link clr to tsqlt-->
+                    <path d="M211.173,67.827 C201.922,90.422 189.646,120.403 181.32,140.738 " fill="none" id="clr&lt;-tsqlt" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <polygon fill="#A80036" points="213.099,63.123,205.9856,69.9347,211.2034,67.7498,213.3884,72.9676,213.099,63.123" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="42" x="201" y="107.4951">&#xAB;uses &#xBB;</text>
+                    <!--MD5=[3dc4aa8ebb6b51a6d68d3570ccb65386]
+                    reverse link sys to tsqlt-->
+                    <path d="M104.9988,63.392 C120.433,86.453 142.415,119.297 156.935,140.992 " fill="none" id="sys&lt;-tsqlt" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <polygon fill="#A80036" points="102.1963,59.205,103.8782,68.9092,104.9774,63.3601,110.5265,64.4593,102.1963,59.205" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="42" x="136" y="107.4951">&#xAB;uses &#xBB;</text>
+                    <!--MD5=[ad617d23df0304735f9fca0d2379442e]
+                    reverse link sys to proj-->
+                    <path d="M66.7861,63.378 C61.1909,72.332 55.8692,82.667 53,93 C48.6733,108.581 49.6061,126.838 51.5249,140.869 " fill="none" id="sys&lt;-proj" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <polygon fill="#A80036" points="69.5453,59.1,61.3058,64.4954,66.8353,63.3019,68.0288,68.8314,69.5453,59.1" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="42" x="54" y="107.4951">&#xAB;uses &#xBB;</text>
+                    <!--MD5=[645c2dc19e31240c589f69de6e29410e]
+                    reverse link proj to test-->
+                    <path d="M64.4929,207.935 C67.1928,217.438 70.6455,227.2799 75,236 C80.2699,246.5534 87.8492,257.0315 95.061,265.819 " fill="none" id="proj&lt;-test" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <polygon fill="none" points="57.6273,209.325,59.7273,188.24,71.2347,206.032,57.6273,209.325" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="56" x="76" y="232.4951">&#xAB;inherits &#xBB;</text>
+                    <!--MD5=[d53a36ac326148185b05ba87d277390e]
+                    reverse link tsqlt to test-->
+                    <path d="M153.39,206.376 C144.404,226.1131 133.958,249.0556 126.396,265.6664 " fill="none" id="tsqlt&lt;-test" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <polygon fill="none" points="147.071,203.362,161.729,188.06,159.812,209.163,147.071,203.362" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="56" x="149" y="232.4951">&#xAB;inherits &#xBB;</text>
+                    <!--MD5=[b759f5dc15802d268046ccf3732d19ac]
+                    @startuml
+                    database TSQLt as tsqlt
+                        database "Master" as sys
+                        database "//SomeProject//" as proj
+
+                        database "//SomeProject//.test" as test
+                        rectangle "TSQLt.dll" <<CLR>> as clr
+
+                        clr <- - tsqlt : <<uses>>
+                        sys <- - tsqlt: <<uses>>
+
+                        sys <- - proj: <<uses>>
+
+                        proj <|- - test: <<inherits>>
+                        tsqlt <|- -  test: <<inherits>>
+                    @enduml
+
+                    PlantUML version 1.2019.11(Sun Sep 22 05:02:15 CDT 2019)
+                    (MIT source distribution)
+                    Java Runtime: Java(TM) SE Runtime Environment
+                    JVM: Java HotSpot(TM) Client VM
+                    Java Version: 1.8.0_201-b09
+                    Operating System: Windows 10
+                    Default Encoding: Cp1252
+                    Language: en
+                    Country: US
+                    -->
+                </g>
+            </svg>
+        </p>
+        <h1 class="mume-header" id="appendix">Appendix</h1>
+        <p>
+            <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+            <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="688px" preserveAspectRatio="none" style="width:492px;height:688px;" version="1.1" viewBox="0 0 492 688" width="492px" zoomAndPan="magnify">
+                <defs>
+                    <filter height="300%" id="f38847pirhdsf" width="300%" x="-1" y="-1">
+                        <feGaussianBlur result="blurOut" stdDeviation="2.0" />
+                        <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" />
+                        <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3" />
+                        <feBlend in="SourceGraphic" in2="blurOut3" mode="normal" />
+                    </filter>
+                </defs>
+                <g>
+                    <text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="134" x="194" y="18.6855">Example Project:</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="177" x="172.5" y="41.3262">Logical Dependencies</text>
+                    <!--MD5=[5f80d3b559410ce9101cdc22ee3a3810]
+                    cluster proj-->
+                    <path d="M30,190.2813 C30,180.2813 138,180.2813 138,180.2813 C138,180.2813 246,180.2813 246,190.2813 L246,394.2813 C246,404.2813 138,404.2813 138,404.2813 C138,404.2813 30,404.2813 30,394.2813 L30,190.2813 " fill="#FFFFFF" filter="url(#f38847pirhdsf)" style="stroke: #000000; stroke-width: 1.5;" />
+                    <path d="M30,190.2813 C30,200.2813 138,200.2813 138,200.2813 C138,200.2813 246,200.2813 246,190.2813 " fill="none" style="stroke: #000000; stroke-width: 1.5;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="59" x="108.5" y="216.8145">Benefits</text>
+                    <!--MD5=[4fc8f0b91474c5740b76f60c2df48bbc]
+                    cluster dbo-->
+                    <rect fill="#FFFFFF" filter="url(#f38847pirhdsf)" height="125" style="stroke: #000000; stroke-width: 1.5;" width="144" x="70" y="247.2813" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="65" x="109.5" y="263.8145">&#xAB;schema &#xBB;</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="27" x="128.5" y="281.4238">dbo</text>
+                    <!--MD5=[250a1d111110598ae4d9566e9df70ce6]
+                    cluster test-->
+                    <path d="M118,480.2813 C118,470.2813 299,470.2813 299,470.2813 C299,470.2813 480,470.2813 480,480.2813 L480,666.2813 C480,676.2813 299,676.2813 299,676.2813 C299,676.2813 118,676.2813 118,666.2813 L118,480.2813 " fill="#FFFFFF" filter="url(#f38847pirhdsf)" style="stroke: #000000; stroke-width: 1.5;" />
+                    <path d="M118,480.2813 C118,490.2813 299,490.2813 299,490.2813 C299,490.2813 480,490.2813 480,480.2813 " fill="none" style="stroke: #000000; stroke-width: 1.5;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="90" x="254" y="506.8145">Benefits.test</text>
+                    <!--MD5=[b90f2e4eb706bc8a8c9cd6de8e27da15]
+                    cluster test_suit-->
+                    <rect fill="#FFFFFF" filter="url(#f38847pirhdsf)" height="107" style="stroke: #000000; stroke-width: 1.5;" width="290" x="158" y="537.2813" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="169" x="218.5" y="553.8145">SomeAction &lt;&lt;schema &gt;&gt;</text>
+                    <!--MD5=[735b48506a591e47526ca36b4b4b7f20]
+                    entity unit-->
+                    <rect fill="#FEFECE" filter="url(#f38847pirhdsf)" height="55.2188" style="stroke: #000000; stroke-width: 1.5;" width="111" x="86.5" y="301.2813" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="91" x="96.5" y="325.8145">&#xAB;Stored Proc &#xBB;</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="75" x="104.5" y="343.4238">SomeAction</text>
+                    <!--MD5=[50946cdc4105e34cacb4e68fee384fe6]
+                    entity Test1-->
+                    <rect fill="#FEFECE" filter="url(#f38847pirhdsf)" height="55.2188" style="stroke: #000000; stroke-width: 1.5;" width="111" x="320.5" y="573.2813" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="91" x="330.5" y="597.8145">&#xAB;Stored Proc &#xBB;</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="36" x="358" y="615.4238">Test1</text>
+                    <!--MD5=[03881cff9d28f7892d486ddce371e2fa]
+                    entity Test2-->
+                    <rect fill="#FEFECE" filter="url(#f38847pirhdsf)" height="55.2188" style="stroke: #000000; stroke-width: 1.5;" width="111" x="174.5" y="573.2813" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="91" x="184.5" y="597.8145">&#xAB;Stored Proc &#xBB;</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="36" x="212" y="615.4238">Test2</text>
+                    <!--MD5=[7250a7eff02f61f856d26e39edc9cbc4]
+                    entity tsqlt-->
+                    <path d="M270,315.2813 C270,305.2813 293,305.2813 293,305.2813 C293,305.2813 316,305.2813 316,315.2813 L316,341.8906 C316,351.8906 293,351.8906 293,351.8906 C293,351.8906 270,351.8906 270,341.8906 L270,315.2813 " fill="#FEFECE" filter="url(#f38847pirhdsf)" style="stroke: #000000; stroke-width: 1.5;" />
+                    <path d="M270,315.2813 C270,325.2813 293,325.2813 293,325.2813 C293,325.2813 316,325.2813 316,315.2813 " fill="none" style="stroke: #000000; stroke-width: 1.5;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="26" x="280" y="343.8145">tsqlt</text>
+                    <!--MD5=[ef2f3d6815c792d082a7c132eb1ade2f]
+                    entity sys-->
+                    <path d="M92.5,67.2813 C92.5,57.2813 124,57.2813 124,57.2813 C124,57.2813 155.5,57.2813 155.5,67.2813 L155.5,93.8906 C155.5,103.8906 124,103.8906 124,103.8906 C124,103.8906 92.5,103.8906 92.5,93.8906 L92.5,67.2813 " fill="#FEFECE" filter="url(#f38847pirhdsf)" style="stroke: #000000; stroke-width: 1.5;" />
+                    <path d="M92.5,67.2813 C92.5,77.2813 124,77.2813 124,77.2813 C124,77.2813 155.5,77.2813 155.5,67.2813 " fill="none" style="stroke: #000000; stroke-width: 1.5;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="43" x="102.5" y="95.8145">Master</text>
+                    <!--MD5=[6b513d952e6cf5cc91948467d409a9fc]
+                    entity clr-->
+                    <rect fill="#FEFECE" filter="url(#f38847pirhdsf)" height="55.2188" style="stroke: #000000; stroke-width: 1.5;" width="93" x="246.5" y="53.2813" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="44" x="271" y="77.8145">&#xAB;CLR &#xBB;</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="73" x="256.5" y="95.4238">TSQLt CLR</text>
+                    <!--MD5=[364426c06e407c9b8fcb2ad4a2bd029e]
+                    reverse link clr to tsqlt-->
+                    <path d="M293,113.5983 C293,163.9883 293,260.9423 293,304.9973 " fill="none" id="clr&lt;-tsqlt" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <polygon fill="#A80036" points="293,108.5762,289,117.5762,293,113.5762,297,117.5762,293,108.5762" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="42" x="294" y="152.7764">&#xAB;uses &#xBB;</text>
+                    <!--MD5=[3dc4aa8ebb6b51a6d68d3570ccb65386]
+                    reverse link sys to tsqlt-->
+                    <path d="M158.345,107.9322 C176.507,122.9892 198.242,143.0933 214,164.2813 C247.864,209.8143 273.163,272.1483 285.2,305.1463 " fill="none" id="sys&lt;-tsqlt" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <polygon fill="#A80036" points="154.289,104.6042,158.708,113.4061,158.1539,107.7764,163.7835,107.2223,154.289,104.6042" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="42" x="207" y="152.7764">&#xAB;uses &#xBB;</text>
+                    <!--MD5=[ad617d23df0304735f9fca0d2379442e]
+                    reverse link sys to proj-->
+                    <path d="M102.4472,108.8273 C91.1753,124.2542 78.0789,144.4253 70,164.2813 C68.2831,168.5009 66.6564,172.8202 65.1152,177.2109 C64.9226,177.7597 64.7313,178.3097 64.5413,178.8607 C64.4463,179.1362 64.3516,179.4119 64.2573,179.688 " fill="none" id="sys&lt;-proj" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <polygon fill="#A80036" points="105.5724,104.6063,97.0019,109.4587,102.5969,108.6245,103.4311,114.2195,105.5724,104.6063" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="42" x="83" y="152.7764">&#xAB;uses &#xBB;</text>
+                    <!--MD5=[645c2dc19e31240c589f69de6e29410e]
+                    reverse link proj to test-->
+                    <path d="M62.3403,404.4614 C63.5658,408.2216 64.817,412.0604 66.0886,415.9621 C71.1753,431.5688 76.5898,448.1814 82.0042,464.7938 C92.833,498.0185 103.6614,531.2423 111.8659,556.4154 C113.9171,562.7087 115.8042,568.4988 117.4863,573.66 C117.5915,573.9825 117.6958,574.3026 117.7993,574.6203 C117.8511,574.7791 117.9026,574.9373 117.954,575.0948 " fill="none" id="proj&lt;-test" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <polygon fill="#FFFFFF" points="62.3403,404.4614,61.5726,424.6953,74.8835,420.357,62.3403,404.4614" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="56" x="76" y="442.7764">&#xAB;inherits &#xBB;</text>
+                    <!--MD5=[d53a36ac326148185b05ba87d277390e]
+                    reverse link tsqlt to test-->
+                    <path d="M264.057,368.0313 C250.034,385.1503 232.289,404.8953 214,420.2813 C191.719,439.0253 174.937,430.5973 158,454.2813 C155.6304,457.5948 153.4312,461.0513 151.3905,464.6207 C150.3701,466.4054 149.3893,468.2183 148.4467,470.0557 " fill="none" id="tsqlt&lt;-test" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <polygon fill="none" points="258.58,363.6733,276.49,352.3493,269.55,372.3703,258.58,363.6733" style="stroke: #A80036; stroke-width: 1.0;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="56" x="203" y="442.7764">&#xAB;inherits &#xBB;</text>
+                    <!--MD5=[50fe9348785420368c1cec0a71651fff]
+                    @startuml
+                    title  Example Project:\nLogical Dependencies
+                        database tsqlt
+                        database "Master" as sys
+                        database "Benefits" as proj {
+                            rectangle "dbo"<<schema>> {
+                                rectangle "SomeAction" <<Stored Proc>> as unit
+                            }
+                        }
+                        database "Benefits.test" as test {
+                            rectangle SomeAction<<schema>> as test_suit {
+
+                                rectangle Test1 <<Stored Proc>>
+                                rectangle Test2 <<Stored Proc>>
+                            }
+                        }
+
+                        rectangle "TSQLt CLR" <<CLR>> as clr
+
+                        clr <- - tsqlt : <<uses>>
+                        sys <- - tsqlt: <<uses>>
+
+                        sys <- - proj: <<uses>>
+
+                        proj <|- - test: <<inherits>>
+                        tsqlt <|- -  test: <<inherits>>
+                    @enduml
+
+                    PlantUML version 1.2019.11(Sun Sep 22 05:02:15 CDT 2019)
+                    (MIT source distribution)
+                    Java Runtime: Java(TM) SE Runtime Environment
+                    JVM: Java HotSpot(TM) Client VM
+                    Java Version: 1.8.0_201-b09
+                    Operating System: Windows 10
+                    Default Encoding: Cp1252
+                    Language: en
+                    Country: US
+                    -->
+                </g>
+            </svg>
+        </p>
+        <p>
+            <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+            <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="248px" preserveAspectRatio="none" style="width:663px;height:248px;" version="1.1" viewBox="0 0 663 248" width="663px" zoomAndPan="magnify">
+                <defs>
+                    <filter height="300%" id="f1lk50w3kmkjjl" width="300%" x="-1" y="-1">
+                        <feGaussianBlur result="blurOut" stdDeviation="2.0" />
+                        <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" />
+                        <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3" />
+                        <feBlend in="SourceGraphic" in2="blurOut3" mode="normal" />
+                    </filter>
+                </defs>
+                <g>
+                    <text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="167" x="259" y="18.6855">Physical Deployment</text>
+                    <!--MD5=[ef7fe96555a9a16ba721926d371d4620]
+                    cluster alias-->
+                    <path d="M22,56.6406 C22,46.6406 336.5,46.6406 336.5,46.6406 C336.5,46.6406 651,46.6406 651,56.6406 L651,226.6406 C651,236.6406 336.5,236.6406 336.5,236.6406 C336.5,236.6406 22,236.6406 22,226.6406 L22,56.6406 " fill="#FFFFFF" filter="url(#f1lk50w3kmkjjl)" style="stroke: #000000; stroke-width: 1.5;" />
+                    <path d="M22,56.6406 C22,66.6406 336.5,66.6406 336.5,66.6406 C336.5,66.6406 651,66.6406 651,56.6406 " fill="none" style="stroke: #000000; stroke-width: 1.5;" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="93" x="290" y="83.1738">Benefits.Test</text>
+                    <!--MD5=[3441c19d8d02eb756da2c0da940bebdd]
+                    cluster dbo<<schema>>-->
+                    <rect fill="#FFFFFF" filter="url(#f1lk50w3kmkjjl)" height="107" style="stroke: #000000; stroke-width: 1.5;" width="192" x="435" y="105.6406" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="113" x="474.5" y="122.1738">dbo &lt;&lt;schema &gt;&gt;</text>
+                    <!--MD5=[18c5ca68a930c8e346a5e1a2e0fb221d]
+                    cluster SomeAction<<schema>>-->
+                    <rect fill="#FFFFFF" filter="url(#f1lk50w3kmkjjl)" height="107" style="stroke: #000000; stroke-width: 1.5;" width="290" x="121" y="105.6406" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="169" x="181.5" y="122.1738">SomeAction &lt;&lt;schema &gt;&gt;</text>
+                    <!--MD5=[97d44aaac59f852d8f3d9db8c22cd0db]
+                    entity TSQLt-->
+                    <rect fill="#FEFECE" filter="url(#f1lk50w3kmkjjl)" height="55.2188" style="stroke: #000000; stroke-width: 1.5;" width="64" x="38" y="141.6406" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="44" x="48" y="166.1738">&#xAB;CLR &#xBB;</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="41" x="49.5" y="183.7832">TSQLt</text>
+                    <!--MD5=[197869cc622802d5aa98974bdf897a93]
+                    entity SomeBussinessAction-->
+                    <rect fill="#FEFECE" filter="url(#f1lk50w3kmkjjl)" height="55.2188" style="stroke: #000000; stroke-width: 1.5;" width="159" x="451.5" y="141.6406" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="83" x="489.5" y="166.1738">&#xAB;Store Proc &#xBB;</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="139" x="461.5" y="183.7832">SomeBussinessAction</text>
+                    <!--MD5=[50946cdc4105e34cacb4e68fee384fe6]
+                    entity Test1-->
+                    <rect fill="#FEFECE" filter="url(#f1lk50w3kmkjjl)" height="55.2188" style="stroke: #000000; stroke-width: 1.5;" width="111" x="283.5" y="141.6406" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="91" x="293.5" y="166.1738">&#xAB;Stored Proc &#xBB;</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="36" x="321" y="183.7832">Test1</text>
+                    <!--MD5=[03881cff9d28f7892d486ddce371e2fa]
+                    entity Test2-->
+                    <rect fill="#FEFECE" filter="url(#f1lk50w3kmkjjl)" height="55.2188" style="stroke: #000000; stroke-width: 1.5;" width="111" x="137.5" y="141.6406" />
+                    <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="91" x="147.5" y="166.1738">&#xAB;Stored Proc &#xBB;</text>
+                    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="36" x="175" y="183.7832">Test2</text>
+                    <!--MD5=[f1c3b435b76dd3aba865e36fc16c6ac2]
+                    @startuml
+                    title Physical Deployment
+                    database "Benefits.Test" as alias {
+                     rectangle TSQLt<<CLR>>
+                     rectangle dbo<<schema>> {
+                         rectangle SomeBussinessAction<<Store Proc>>
+                     }
+                     rectangle SomeAction<<schema>> {
+                        rectangle Test1 <<Stored Proc>>
+                        rectangle Test2 <<Stored Proc>>
+                     }
+                    }
+                    @enduml
+
+                    PlantUML version 1.2019.11(Sun Sep 22 05:02:15 CDT 2019)
+                    (MIT source distribution)
+                    Java Runtime: Java(TM) SE Runtime Environment
+                    JVM: Java HotSpot(TM) Client VM
+                    Java Version: 1.8.0_201-b09
+                    Operating System: Windows 10
+                    Default Encoding: Cp1252
+                    Language: en
+                    Country: US
+                    -->
+                </g>
+            </svg>
+        </p>
+    </div>
+</body>
+</html>

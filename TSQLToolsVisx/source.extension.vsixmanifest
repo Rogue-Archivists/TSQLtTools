@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="a5b0936b-aa04-472b-8b11-776c2dbbc077" Version="0.6.5" Language="en-US" Publisher="Rogue-Archivists" />
+        <DisplayName>TSQLt Tools</DisplayName>
+        <Description xml:space="preserve">Just a few tools to make using [TSQLt ](https://tsqlt.org) easier for database unit tests in Visual Studio SQL Projects. 
+The Goal is to make SQL unit testing as much like C# just in TSQL. 
+No GUI with code behind and clicking just code.
+</Description>
+        <MoreInfo>https://github.com/Rogue-Archivists</MoreInfo>
+        <License>LICENCE.txt</License>
+        <Icon>Resources\tsqlt-log.jpg</Icon>
+        <PreviewImage>Resources\Preview.png</PreviewImage>
+        <Tags>SQL, SSDT, Database, Database Development, tSQLt, CI</Tags>
+    </Metadata>
+    <Installation AllUsers="true">
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0, 17.0)" />
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+        <Dependency d:Source="Installed" Id="AgileSQLClub.tSQLtTestAdapter16" DisplayName="tSQLt Test Adapter for Visual Studio 2019" Version="[0.99,1.0)" d:InstallSource="Download" Location="https://marketplace.visualstudio.com/items?itemName=vs-publisher-263684.GoEddietSQLt2019" />
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="TSQLtTools.Templates.Project" d:TargetPath="|TSQLtTools.Templates.Project;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+        <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="Project" d:ProjectName="TSQLtTools.Templates.Items" d:TargetPath="|TSQLtTools.Templates.Items;TemplateProjectOutputGroup|" Path="ItemTemplates" d:VsixSubPath="ItemTemplates" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0)" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.SQL.SSDT" Version="[15.1,17.0)" DisplayName="SQL Server Data Tools" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.SQL.LocalDB.Runtime" Version="[15.0,17.0)" DisplayName="SQL Server Express 2016 LocalDB" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.MSSQL.CMDLnUtils" Version="[15.0,17.0)" DisplayName="SQL Server Command Line Utilities" />
+    </Prerequisites>
+</PackageManifest>

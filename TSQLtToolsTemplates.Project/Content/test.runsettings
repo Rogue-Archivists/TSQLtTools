@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <!-- Parameters used by tests at runtime -->
+  <TestRunParameters>
+    <Parameter name="TestDatabaseConnectionString" value="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=$safeprojectname$;integrated security=sspi" />
+    <!-- If you have a large project then to speed up discovery, use this to limit which .sql files are parsed.
+    If all your tests are in a subfolder called \UnitTests\ 
+    or \Our-UnitTests\ then set the value to UnitTests - it is a regex so U.i.T.s.s will also work. -->
+    <Parameter name="IncludePath" value="\\$safeprojectname$\\" />
+  </TestRunParameters>
+</RunSettings>

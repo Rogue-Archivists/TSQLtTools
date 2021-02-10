@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
+  <Extern href="stdidcmd.h"/>
+
+  <!--This header contains the command ids for the menus provided by the shell. -->
+  <Extern href="vsshlids.h"/>
+  
+  <Include href="KnownImageIds.vsct" />
+
+  <!--The Commands section is where commands, menus, and menu groups are defined.
+      This section uses a Guid to identify the package that provides the command defined inside it. -->
+  <Commands package="guidTSQLtToolsPackage">
+    
+    <Groups>
+      
+      <!-- group to hold the tools menu -->
+      <Group guid="guidTSQLtToolsPackageCmdSet" id="ToolMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+      </Group>
+
+      <!-- Group for item context -->
+      <Group guid="guidTSQLtToolsPackageCmdSet" id="ItemCtxGroup" priority="0x1600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
+      </Group>
+
+      <!-- Group for project context -->
+      <Group guid="guidTSQLtToolsPackageCmdSet" id="ProjectAddCtxGroup" priority="0x600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CSCD_PROJECT_ADD"/>
+      </Group>
+      
+    </Groups>
+
+    <!--Buttons section. -->
+    <!--This section defines the elements the user can interact with, like a menu command or a button
+        or combo box in a toolbar. -->
+    <Buttons>
+      
+      <!-- add a test button -->
+      <Button guid="guidTSQLtToolsPackageCmdSet" id="addNewTestId" priority="0x0100" type="Button">
+        <Parent guid="guidTSQLtToolsPackageCmdSet" id="ToolMenuGroup" />
+        <Icon guid="ImageCatalogGuid" id="AddTest" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <Strings>
+          <ButtonText>Invoke addNewTest</ButtonText>
+        </Strings>
+      </Button>
+      
+      <!-- add a unit test project button -->
+      <Button guid="guidTSQLtToolsPackageCmdSet" id="addUnitTestProjectId" priority="0x0100" type="Button">
+        <Parent guid="guidTSQLtToolsPackageCmdSet" id="ToolMenuGroup" />
+        <Icon guid="ImageCatalogGuid" id="DatabaseTest" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <Strings>
+          <ButtonText>Invoke addTestProject</ButtonText>
+        </Strings>
+      </Button>
+      
+      <!-- Update Poject Settings to Standard -->
+      <Button guid="guidTSQLtToolsPackageCmdSet" id="ProjSettingsID" priority="0x0100" type="Button">
+        <Parent guid="guidTSQLtToolsPackageCmdSet" id="ToolMenuGroup" />
+        <Icon guid="ImageCatalogGuid" id="ConfigurationEditor"/>
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <Strings>
+          <ButtonText>Update Project Settings</ButtonText>
+        </Strings>
+      </Button>
+      
+      <!-- Push selected Item to LocalDB -->
+      <Button guid="guidTSQLtToolsPackageCmdSet" id="PushItemID" priority="0x0100" type="Button">
+        <Parent guid="guidTSQLtToolsPackageCmdSet" id="ToolMenuGroup" />
+        <Icon guid="ImageCatalogGuid" id="LineArrow"/>
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <Strings>
+          <ButtonText>Push Current to localDB</ButtonText>
+        </Strings>
+      </Button>
+      
+    </Buttons>
+
+    <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
+    <Bitmaps>
+      
+      <!-- TODO: add custom images/Monikers, but for right now use the stock icos-->
+      <Bitmap guid="guidImages" href="Resources\addNewTest.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough"/>
+    </Bitmaps>
+  </Commands>
+
+  <!-- map the group to the context menus-->
+  <CommandPlacements>
+    
+    <!--Here we place two commands inside the empty menu group we created in the Groups section.-->
+
+    <CommandPlacement guid="guidTSQLtToolsPackageCmdSet" id="addUnitTestProjectId" priority="0x600">
+      <Parent guid="guidTSQLtToolsPackageCmdSet" id="ProjectAddCtxGroup"/>
+      <!--
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_ADD_ITEMS"/>
+      -->
+    </CommandPlacement>
+    
+    <CommandPlacement guid="guidTSQLtToolsPackageCmdSet" id="ProjSettingsID" priority="0x100">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_BUILD"/>
+      <!--<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_UNLOADRELOAD" /> -->
+    </CommandPlacement>
+
+    <CommandPlacement guid="guidTSQLtToolsPackageCmdSet" id="addNewTestId" priority="0x100">
+      <Parent guid="guidTSQLtToolsPackageCmdSet" id="ItemCtxGroup"/>
+    </CommandPlacement>
+    
+    <CommandPlacement guid="guidTSQLtToolsPackageCmdSet" id="PushItemID" priority="0x100">
+      <Parent guid="guidTSQLtToolsPackageCmdSet" id="ItemCtxGroup"/>
+    </CommandPlacement>
+
+  </CommandPlacements>
+
+
+  <Symbols>
+    <!-- This is the package guid. -->
+    <GuidSymbol name="guidTSQLtToolsPackage" value="{8d5deb5f-75bb-4956-b1aa-831898433f36}" />
+    
+    <!-- This is the guid used to group the menu commands together -->
+    <GuidSymbol name="guidTSQLtToolsPackageCmdSet" value="{dc07a335-c898-44a0-a612-9a8ed3d9dec4}">
+      <IDSymbol name="ToolMenuGroup" value="0x1020" />
+      <IDSymbol name="addNewTestId" value="0x0100" />
+      <IDSymbol name="addUnitTestProjectId" value="0x0101" />
+      <IDSymbol name="ProjectAddCtxGroup" value="0x1013" />
+      <IDSymbol name="ItemCtxGroup" value="0x1014" />
+      <IDSymbol name="ProjSettingsID" value="0x1015"/>
+      <IDSymbol name="PushItemID" value="0x1016"/>
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{5d5a2558-d75a-4912-b121-34e15be1385a}" >
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
