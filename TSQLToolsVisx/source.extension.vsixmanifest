@@ -9,6 +9,7 @@ No GUI with code behind and clicking just code.
 </Description>
         <MoreInfo>https://github.com/Rogue-Archivists</MoreInfo>
         <License>LICENCE.txt</License>
+        <GettingStartedGuide>Resources\index.html</GettingStartedGuide>
         <Icon>Resources\tsqlt-log.jpg</Icon>
         <PreviewImage>Resources\Preview.png</PreviewImage>
         <Tags>SQL, SSDT, Database, Database Development, tSQLt, CI</Tags>
