@@ -68,6 +68,7 @@ All of this has been bundled up into a database reference (.dacpack file) and th
     }
 ```
 
+![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuL80Whpyb5G5fPBYmfmIlPJ4v8B4v6obQg0C0XIb9fSavgNdW9G51_gKEFi4wQNav2WfsDW0cNPsk1IxLXG0ES7vkQab6PbvwI3rmINvHQaf0KNvoRYr-UOdP-FNLClba9gN0lG00000)
 ## tSQLt Test Adapter
 
 To Perform database unit test with tSQLt we need Visual Studio to do the following:
@@ -110,6 +111,7 @@ The extension provides the following:
     vs-> test: Run Suite1
     test -> db: exec [Suite1].[Run all tests]
 ```
+![Execution diagram](http://www.plantuml.com/plantuml/png/ZP0nJyCm48Nt_8gdx22nHYegLM5YABImL1qkyQKOENRbErVmxqdSA5450vlVkq_VsLwAKjJKkGBKQ8WegpMVsOKJnn8aICAn080w96yeVgDyjvB8OQl9s92XisIa2LvZS2ZVl5NiM1GFXauwghGlHiuvRjG6BoWtCNps0K_MiMIk7KuPDAHKap1A5nfowrMUcxh8qyK2gsITwGyv3rV5pJtEWkeooNKV-p9BAsme2kSw5nFU1SDkqcvIxQny_2aUPvDwh8rjMz2Hh1STRJDXwc65FKPIXZJHddJQzPeyoBdyNV9xOpK1EW2pDESAZpvrdBr3XYIhVA5odbyk3Ncq8MAtVNd6xXyoWVMpjHZf2HxkjHtMtLsjCtK5_k86-ylmSBk_Ui6XMB8tgNC_)
 
 It is important to remember that:
 
@@ -137,6 +139,7 @@ The diagram below illustrates the logical dependencies SQL Project `SomeProject.
     tsqlt <|--  test: <<includes>>
 caption: Logical Dependencies in a tSQLt SQL Project
 ```
+![Logical Dependencies](http://www.plantuml.com/plantuml/png/VP71QiCm38RlUGgHUvjx2Q6m7JFOrYVGR54yL3kpbCDW3p_9BTjQHdqmihyF-qVQYsBLzSGTs8ge-8P2e8UNMG45L3vOhrd_XA9KUyVoAJTm60xbHC-rl5FGOMZMOgVklhTL4cso5ysj1Z0VsUGMPnkPUnZ7X_brcjmCN3itlO1nipc7XPqvgv1CaqEF-0l_i2le2M-Pty7uPTGZEKqvy1f_NZv_rup_b82Bff9tC9TZ2iZmI0lbI3aa4aWPyD9cs-3IY6vlXatZ6m00)
 
 The database reference to `tSQLt` *should* be satisfied by a reference to <pre>\\\\<build_server>\build\Reference\Dacpacs\tSQLt\\\$sql_target\$\\tSQLt.dacpac</pre> where `$sql_target` is target engine version for the project. Since the unit testing framework is included in the DACPAK there is no need to install the library local a rebuild will pull the latest CLR DLL with the DPACK at build time.
 
@@ -176,8 +179,11 @@ This project structure dependes on database refrences using _same database_ mode
     proj <|-- test: <<includes>>
     tsqlt <|--  test: <<includes>>
 ```
+![Detailed Dependencies](http://www.plantuml.com/plantuml/png/ZP91Jm8n48Nl_8h9tZ7H8zbiCCeD4nMF9gQq4wXsstLdca3K_-wKIeeRG7k0Rjzxqw_JJebLpx5r8v31bXq2p3QgxMHotuTNr3nvzd2BhAn30_EmibevMUZG6_JQ8ksoHh5QAa9WUdSC7xAOHoybb5yvKHOFSuQw9ht6LZLDCGsCrMpJoSSYjCXhwrULX1OSUZI2f9lcLEmkwBU_Gr-Z_7j8BLb5Z7q5Ye2sD1ItFxtOwPtCZnwmCijG_Uk0YV9Qims-O4BcJ3j4R_ayRq6wOAJCbIP7kSfk1t3xn0j5cs8dK9_4SZbaFEEzEk4jvnWDUf6VnStyCRL2_ZAQTdrsocr0FHxdTpKHIoIaN3QPYWP5_9rCzpNKqXhKdoahq4crNhjezgLpoUmuPfcYDx5rtm00)
+
 <br/>
 After build all the same database references are in-lined into the top level project before compairing agins the active database for deployments.
+
 
 ```plantuml
 title  Example Project:\n Detailed Physical Deployment
@@ -199,3 +205,5 @@ database "MyProject.Test" as alias {
  }
 }
 ```
+
+![Physical Deployment](http://www.plantuml.com/plantuml/png/VP1DQiCm48NtEiNW0mJQPGaY_SakWRJkifk9DCHgHvAnnX1JVFTAhIbk4xmHGk-RxqdQ9C5EUizAd301RC_esxmvTF6TZDoz1NWYGSTauT0CoHdaVD9o73m5KHO5ZvW8glqmpQnUAKa5c03PvVLJGKT6C9muOr8_xsHbcIjOhnztBrghUVuTvoIPXZngNQO1veBjkIKZTVGaZGkdegabTcHplT7wFxwFvcC17l-qssEyx9xbHVJG9nSefNiZBeR91zTzXV_XbfvK_klczsQJwWfpUycCQbGR2hRt_0K0)

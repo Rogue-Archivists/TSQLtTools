@@ -14,15 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tSQLtTools.Templates.Items", "tSQLtToolsTemplates.Items\tSQLtTools.Templates.Items.csproj", "{1109804C-B481-4C61-BE97-E9F1911E44E6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{9316B1CC-4EFC-4449-AE82-9C7AB5DD5456}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dist", "dist", "{9316B1CC-4EFC-4449-AE82-9C7AB5DD5456}"
 	ProjectSection(SolutionItems) = preProject
-		Docs\Details.md = Docs\Details.md
 		Docs\Templates.md = Docs\Templates.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commands", "Commands", "{12DFD012-212F-4959-95D1-6140B119E1C5}"
-	ProjectSection(SolutionItems) = preProject
-		Docs\Commands\MatchSSDTProject.md = Docs\Commands\MatchSSDTProject.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tSQLtTools.Templates.Project", "tSQLtToolsTemplates.Project\tSQLtTools.Templates.Project.csproj", "{7CBB7825-917D-47E5-9C68-4CB99F1510A7}"
@@ -51,7 +45,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9316B1CC-4EFC-4449-AE82-9C7AB5DD5456} = {2EB4A900-E1AD-4698-B65E-14A4489D12A4}
-		{12DFD012-212F-4959-95D1-6140B119E1C5} = {9316B1CC-4EFC-4449-AE82-9C7AB5DD5456}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {08354A4D-0349-4291-A350-A764FCFEEA5B}
