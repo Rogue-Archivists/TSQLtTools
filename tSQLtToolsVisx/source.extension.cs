@@ -14,8 +14,8 @@ The Goal is to make SQL unit testing as much like C# just in TSQL.
 No GUI with code behind and clicking just code.
 ";
         public const string Language = "en-US";
-        public const string Version = "0.6.3";
-        public const string Author = "Matthew Naul";
+        public const string Version = "0.6.5";
+        public const string Author = "Rogue-Archivists";
         public const string Tags = "SQL, SSDT, Database, Database Development, tSQLt, CI";
     }
 }
