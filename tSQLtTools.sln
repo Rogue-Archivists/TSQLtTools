@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSQLtTools", "TSQLToolsVisx\TSQLtTools.csproj", "{F6A51001-A5CC-44BD-83B5-17BB1F5534E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tSQLtTools", "tSQLtToolsVisx\tSQLtTools.csproj", "{F6A51001-A5CC-44BD-83B5-17BB1F5534E5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2EB4A900-E1AD-4698-B65E-14A4489D12A4}"
 	ProjectSection(SolutionItems) = preProject
@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSQLtTools.Templates.Items", "TSQLtToolsTemplates.Items\TSQLtTools.Templates.Items.csproj", "{1109804C-B481-4C61-BE97-E9F1911E44E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tSQLtTools.Templates.Items", "tSQLtToolsTemplates.Items\tSQLtTools.Templates.Items.csproj", "{1109804C-B481-4C61-BE97-E9F1911E44E6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{9316B1CC-4EFC-4449-AE82-9C7AB5DD5456}"
 	ProjectSection(SolutionItems) = preProject
@@ -25,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commands", "Commands", "{12
 		Docs\Commands\MatchSSDTProject.md = Docs\Commands\MatchSSDTProject.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSQLtTools.Templates.Project", "TSQLtToolsTemplates.Project\TSQLtTools.Templates.Project.csproj", "{7CBB7825-917D-47E5-9C68-4CB99F1510A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tSQLtTools.Templates.Project", "tSQLtToolsTemplates.Project\tSQLtTools.Templates.Project.csproj", "{7CBB7825-917D-47E5-9C68-4CB99F1510A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

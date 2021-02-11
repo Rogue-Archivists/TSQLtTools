@@ -15,7 +15,7 @@ vs -> wiz ** : Solution Wizard
 wiz -> vs ++ : Add Project: SSDT Standard
 return done
 
-wiz -> vs ++: Add Project: TSQLt Unit Test Proj
+wiz -> vs ++: Add Project: tSQLt Unit Test Proj
 return done
 
 wiz -> vs ++: Add Item: TestClass

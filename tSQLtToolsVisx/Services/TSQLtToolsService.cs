@@ -3,9 +3,9 @@ using System.Threading;
 using Microsoft.VisualStudio.Shell;
 using Task = System.Threading.Tasks.Task;
 
-namespace TSQLtTools
+namespace tSQLtTools
 {
-    public class TSQLtToolsService
+    public class tSQLtToolsService
     {
         private EnvDTE.DTE _dte;
 

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TSQLTools")]
-[assembly: AssemblyDescription("SSDT teampaltes and dependencies for TSQLt Unit testing")]
+[assembly: AssemblyTitle("tSQLtTools")]
+[assembly: AssemblyDescription("SSDT teampaltes and dependencies for tSQLt Unit testing")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TSQLTools")]
+[assembly: AssemblyProduct("tSQLtTools")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

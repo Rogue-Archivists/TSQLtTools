@@ -19,8 +19,8 @@
     <ProjectGuid>{F6A51001-A5CC-44BD-83B5-17BB1F5534E5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TSQLtTools</RootNamespace>
-    <AssemblyName>TSQLtTools</AssemblyName>
+    <RootNamespace>tSQLtTools</RootNamespace>
+    <AssemblyName>tSQLtTools</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
@@ -57,13 +57,13 @@
     <Compile Include="Helpers\Logger.cs" />
     <Compile Include="Helpers\ProjectHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\TSQLtToolsService.cs" />
+    <Compile Include="Services\tSQLtToolsService.cs" />
     <Compile Include="source.extension.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>source.extension.vsixmanifest</DependentUpon>
     </Compile>
-    <Compile Include="TSQLtTools.cs" />
+    <Compile Include="tSQLtTools.cs" />
     <Compile Include="VSCommandTable.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -106,16 +106,16 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TSQLtToolsTemplates.Items\TSQLtTools.Templates.Items.csproj">
+    <ProjectReference Include="..\tSQLtToolsTemplates.Items\tSQLtTools.Templates.Items.csproj">
       <Project>{1109804C-B481-4C61-BE97-E9F1911E44E6}</Project>
-      <Name>TSQLtTools.Templates.Items</Name>
+      <Name>tSQLtTools.Templates.Items</Name>
       <VSIXSubPath>ItemTemplates</VSIXSubPath>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
     </ProjectReference>
-    <ProjectReference Include="..\TSQLtToolsTemplates.Project\TSQLtTools.Templates.Project.csproj">
+    <ProjectReference Include="..\tSQLtToolsTemplates.Project\tSQLtTools.Templates.Project.csproj">
       <Project>{7CBB7825-917D-47E5-9C68-4CB99F1510A7}</Project>
-      <Name>TSQLtTools.Templates.Project</Name>
+      <Name>tSQLtTools.Templates.Project</Name>
       <VSIXSubPath>ProjectTemplates</VSIXSubPath>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>

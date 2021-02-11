@@ -1,4 +1,4 @@
-#TSQLtTools Detail Docs
+#tSQLtTools Detail Docs
 
 [TOC]
 
@@ -8,7 +8,7 @@
    * [X] Test Class w/ folder
  * [X] Project Templates
    * [X] Best Practice SSDT
-   * [X] TSQLt SSDT Unit Test Project
+   * [X] tSQLt SSDT Unit Test Project
  * [ ] Commands
    * [ ] Configure Project for Unit Tests
    * [ ] Added Unit Test Project

@@ -2,7 +2,7 @@
     <html>
     <head>
         <meta charset="UTF-8">
-        <title>TSQLt Tools</title>
+        <title>tSQLt Tools</title>
         <style>
 </style>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
@@ -29,7 +29,7 @@
 
     </head>
     <body class="vscode-body vscode-light">
-        <h1 id="tsqlt-tools">TSQLt Tools</h1>
+        <h1 id="tsqlt-tools">tSQLt Tools</h1>
 <ul>
 <li><a href="#features">Features</a></li>
 <li><a href="#dependencies">Dependencies</a></li>
@@ -40,12 +40,12 @@
 <li><a href="#add-to-existing-projects">Add to Existing Projects</a></li>
 </ul>
 </li>
-<li><a href="#what-is-tsqlt">What is TSQLt</a></li>
-<li><a href="#tsqlt-test-adapter">TSQLt Test Adapter</a></li>
+<li><a href="#what-is-tsqlt">What is tSQLt</a></li>
+<li><a href="#tsqlt-test-adapter">tSQLt Test Adapter</a></li>
 <li><a href="#configuring-a-database-solution">Configuring a Database Solution</a></li>
 <li><a href="#appendix">Appendix</a></li>
 </ul>
-<p>Just a few tools to make using <a href="https://tsqlt.org">TSQLt</a> easier for database unit tests in Visual Studio SQL Projects.
+<p>Just a few tools to make using <a href="https://tsqlt.org">tSQLt</a> easier for database unit tests in Visual Studio SQL Projects.
 The Goal is to make SQL unit testing as much like C# just in TSQL. No GUI with code behind and clicking just code.</p>
 <p>This allow the developer test in isolation any structural change to tables or stored procedures refactors for correctness before committing code.</p>
 <h2 id="features">Features</h2>
@@ -62,22 +62,22 @@ The Goal is to make SQL unit testing as much like C# just in TSQL. No GUI with c
 <ul>
 <li>Visual Studio 2017/2019 (VS)</li>
 <li>LocalDB (part of must VS installs)</li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=vs-publisher-263684.GoEddietSQLt2019">TSQLt Test Runner Adapter</a>  by Ed Elliott</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=vs-publisher-263684.GoEddietSQLt2019">tSQLt Test Runner Adapter</a>  by Ed Elliott</li>
 </ul>
 <h2 id="setup">Setup</h2>
 <ol>
 <li>add the local extension feed to visual studio</li>
-<li>install the extension &quot;TSQLt Tools&quot;</li>
+<li>install the extension &quot;tSQLt Tools&quot;</li>
 </ol>
 <h2 id="quick-use">Quick Use</h2>
 <h3 id="new-solution">New Solution</h3>
 <ol>
-<li>File &gt; New Solution &gt; SQL &gt; TSQLt Solution</li>
+<li>File &gt; New Solution &gt; SQL &gt; tSQLt Solution</li>
 </ol>
 <h3 id="add-to-existing-projects">Add to Existing Projects</h3>
 <ol>
 <li>
-<p>Solution &gt; Add Project &gt; SQL &gt; Unit Test &gt; TSQLt</p>
+<p>Solution &gt; Add Project &gt; SQL &gt; Unit Test &gt; tSQLt</p>
 </li>
 <li>
 <p>Name &quot;<em>SomeProject</em>.Test&quot;</p>
@@ -96,7 +96,7 @@ The Goal is to make SQL unit testing as much like C# just in TSQL. No GUI with c
 <p>as needed &quot;<em>SomeProject</em>&quot; &gt; database Item &gt; Add Unit test</p>
 </li>
 </ol>
-<h2 id="what-is-tsqlt">What is TSQLt</h2>
+<h2 id="what-is-tsqlt">What is tSQLt</h2>
 <p>TSQL is a SQL Server CLR (database plug-in) that adds a unit testing framework to SQL Server database. This includes, but not limited to:</p>
 <ul>
 <li>Isolating Dependencies (Mocking)</li>
@@ -105,7 +105,7 @@ The Goal is to make SQL unit testing as much like C# just in TSQL. No GUI with c
 </ul>
 <p>All of this has been bundled up into a database reference (.dacpack file) and the unit testing can be added to you current database solution as a separate SQL Project.</p>
 
-<img style="background-color:#FFF;" src="https://www.plantuml.com/plantuml/svg/Kr1GKCZBJqbLK2efBimfqKj9J2v8JCvMgkPIG095gSabYNdfEI1bmO4-9Su-GNefEJbA2ZOsGAQT7Ix5hXK5G4vmVcvgIKPcNZf8VN19Vb5gIa1HVZ9kRRxvoTduDTLo0G00"><h2 id="tsqlt-test-adapter">TSQLt Test Adapter</h2>
+<img style="background-color:#FFF;" src="https://www.plantuml.com/plantuml/svg/Kr1GKCZBJqbLK2efBimfqKj9J2v8JCvMgkPIG095gSabYNdfEI1bmO4-9Su-GNefEJbA2ZOsGAQT7Ix5hXK5G4vmVcvgIKPcNZf8VN19Vb5gIa1HVZ9kRRxvoTduDTLo0G00"><h2 id="tsqlt-test-adapter">tSQLt Test Adapter</h2>
 <p>To Perform database unit test with TSQLT we need Visual Studio to do the following:</p>
 <ol>
 <li>Visual Studio can create the project database, with all developer changes</li>
@@ -113,7 +113,7 @@ The Goal is to make SQL unit testing as much like C# just in TSQL. No GUI with c
 <li>Run unit tests <em>in the database as queries</em></li>
 <li>returned the result and displayed in query explorer.</li>
 </ol>
-<p>Steps #1, #2 and #4 are part of Visual Studio. Step #3 is implemented by <em>TSQLt Test Runner Adapter</em> by Ed Elliott.</p>
+<p>Steps #1, #2 and #4 are part of Visual Studio. Step #3 is implemented by <em>tSQLt Test Runner Adapter</em> by Ed Elliott.</p>
 <p>The extension provides the following:</p>
 <ul>
 <li>enumerates the test classes and tests in a Solution</li>
@@ -126,9 +126,9 @@ The Goal is to make SQL unit testing as much like C# just in TSQL. No GUI with c
 <li>tests are <strong>run</strong> from the database and are current as of the last <em>publish</em></li>
 </ul>
 <h2 id="configuring-a-database-solution">Configuring a Database Solution</h2>
-<p>The diagram below illustrates the logical dependencies SQL Project <code>SomeProject.Test</code> has on <code>SomeProject</code> and <code>TSQLt</code>.</p>
+<p>The diagram below illustrates the logical dependencies SQL Project <code>SomeProject.Test</code> has on <code>SomeProject</code> and <code>tSQLt</code>.</p>
 
-<img style="background-color:#FFF;" src="https://www.plantuml.com/plantuml/svg/VP2x3i8m34NtViLLTzeTLLrWB1Al7p2fXO92Mcep8F7n92c2WX1BvEISs5S6W9QK3YIC_MxJA4YWSd6QOSho5Odoa4SiD_c2PRdhphmUkXCRBSjazU6M_VSAPT4anoAvGm3aZox8AKxHEfUZgXRDjgwZQTmmTWq5gjbi38jvSAx2KjS9XeXlE64VC2RyPl4DrJr-3P4YjTwuQ_lgF8vBnY_5KA-sytCqtT4QSbXopxvbRomBh0SzrnmEF1UHFG00"><p>The database reference to <code>TSQLt</code> <em>should</em> be satisfied by a reference to <pre>\\&lt;build_server&gt;\build\Reference\Dacpacs\tSQLt\$sql_target$\tSQLt.dacpac</pre> where <code>$sql_target</code> is target engine version for the project. Since the unit testing framework is included in the DACPAK there is no need to install the library local a rebuild will pull the latest CLR DLL with the DPACK at build time.</p>
+<img style="background-color:#FFF;" src="https://www.plantuml.com/plantuml/svg/VP2x3i8m34NtViLLTzeTLLrWB1Al7p2fXO92Mcep8F7n92c2WX1BvEISs5S6W9QK3YIC_MxJA4YWSd6QOSho5Odoa4SiD_c2PRdhphmUkXCRBSjazU6M_VSAPT4anoAvGm3aZox8AKxHEfUZgXRDjgwZQTmmTWq5gjbi38jvSAx2KjS9XeXlE64VC2RyPl4DrJr-3P4YjTwuQ_lgF8vBnY_5KA-sytCqtT4QSbXopxvbRomBh0SzrnmEF1UHFG00"><p>The database reference to <code>tSQLt</code> <em>should</em> be satisfied by a reference to <pre>\\&lt;build_server&gt;\build\Reference\Dacpacs\tSQLt\$sql_target$\tSQLt.dacpac</pre> where <code>$sql_target</code> is target engine version for the project. Since the unit testing framework is included in the DACPAK there is no need to install the library local a rebuild will pull the latest CLR DLL with the DPACK at build time.</p>
 <h2 id="appendix">Appendix</h2>
 <p>This project structure dependes on database refrences using <em>same database</em> mode. This allows</p>
 

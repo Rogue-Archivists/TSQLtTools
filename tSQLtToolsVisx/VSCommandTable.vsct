@@ -11,22 +11,22 @@
 
   <!--The Commands section is where commands, menus, and menu groups are defined.
       This section uses a Guid to identify the package that provides the command defined inside it. -->
-  <Commands package="guidTSQLtToolsPackage">
+  <Commands package="guidtSQLtToolsPackage">
     
     <Groups>
       
       <!-- group to hold the tools menu -->
-      <Group guid="guidTSQLtToolsPackageCmdSet" id="ToolMenuGroup" priority="0x0600">
+      <Group guid="guidtSQLtToolsPackageCmdSet" id="ToolMenuGroup" priority="0x0600">
         <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
       </Group>
 
       <!-- Group for item context -->
-      <Group guid="guidTSQLtToolsPackageCmdSet" id="ItemCtxGroup" priority="0x1600">
+      <Group guid="guidtSQLtToolsPackageCmdSet" id="ItemCtxGroup" priority="0x1600">
         <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
       </Group>
 
       <!-- Group for project context -->
-      <Group guid="guidTSQLtToolsPackageCmdSet" id="ProjectAddCtxGroup" priority="0x600">
+      <Group guid="guidtSQLtToolsPackageCmdSet" id="ProjectAddCtxGroup" priority="0x600">
         <Parent guid="guidSHLMainMenu" id="IDM_VS_CSCD_PROJECT_ADD"/>
       </Group>
       
@@ -38,8 +38,8 @@
     <Buttons>
       
       <!-- add a test button -->
-      <Button guid="guidTSQLtToolsPackageCmdSet" id="addNewTestId" priority="0x0100" type="Button">
-        <Parent guid="guidTSQLtToolsPackageCmdSet" id="ToolMenuGroup" />
+      <Button guid="guidtSQLtToolsPackageCmdSet" id="addNewTestId" priority="0x0100" type="Button">
+        <Parent guid="guidtSQLtToolsPackageCmdSet" id="ToolMenuGroup" />
         <Icon guid="ImageCatalogGuid" id="AddTest" />
         <CommandFlag>IconIsMoniker</CommandFlag>
         <Strings>
@@ -48,8 +48,8 @@
       </Button>
       
       <!-- add a unit test project button -->
-      <Button guid="guidTSQLtToolsPackageCmdSet" id="addUnitTestProjectId" priority="0x0100" type="Button">
-        <Parent guid="guidTSQLtToolsPackageCmdSet" id="ToolMenuGroup" />
+      <Button guid="guidtSQLtToolsPackageCmdSet" id="addUnitTestProjectId" priority="0x0100" type="Button">
+        <Parent guid="guidtSQLtToolsPackageCmdSet" id="ToolMenuGroup" />
         <Icon guid="ImageCatalogGuid" id="DatabaseTest" />
         <CommandFlag>IconIsMoniker</CommandFlag>
         <Strings>
@@ -58,8 +58,8 @@
       </Button>
       
       <!-- Update Poject Settings to Standard -->
-      <Button guid="guidTSQLtToolsPackageCmdSet" id="ProjSettingsID" priority="0x0100" type="Button">
-        <Parent guid="guidTSQLtToolsPackageCmdSet" id="ToolMenuGroup" />
+      <Button guid="guidtSQLtToolsPackageCmdSet" id="ProjSettingsID" priority="0x0100" type="Button">
+        <Parent guid="guidtSQLtToolsPackageCmdSet" id="ToolMenuGroup" />
         <Icon guid="ImageCatalogGuid" id="ConfigurationEditor"/>
         <CommandFlag>IconIsMoniker</CommandFlag>
         <Strings>
@@ -68,8 +68,8 @@
       </Button>
       
       <!-- Push selected Item to LocalDB -->
-      <Button guid="guidTSQLtToolsPackageCmdSet" id="PushItemID" priority="0x0100" type="Button">
-        <Parent guid="guidTSQLtToolsPackageCmdSet" id="ToolMenuGroup" />
+      <Button guid="guidtSQLtToolsPackageCmdSet" id="PushItemID" priority="0x0100" type="Button">
+        <Parent guid="guidtSQLtToolsPackageCmdSet" id="ToolMenuGroup" />
         <Icon guid="ImageCatalogGuid" id="LineArrow"/>
         <CommandFlag>IconIsMoniker</CommandFlag>
         <Strings>
@@ -92,24 +92,24 @@
     
     <!--Here we place two commands inside the empty menu group we created in the Groups section.-->
 
-    <CommandPlacement guid="guidTSQLtToolsPackageCmdSet" id="addUnitTestProjectId" priority="0x600">
-      <Parent guid="guidTSQLtToolsPackageCmdSet" id="ProjectAddCtxGroup"/>
+    <CommandPlacement guid="guidtSQLtToolsPackageCmdSet" id="addUnitTestProjectId" priority="0x600">
+      <Parent guid="guidtSQLtToolsPackageCmdSet" id="ProjectAddCtxGroup"/>
       <!--
       <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_ADD_ITEMS"/>
       -->
     </CommandPlacement>
     
-    <CommandPlacement guid="guidTSQLtToolsPackageCmdSet" id="ProjSettingsID" priority="0x100">
+    <CommandPlacement guid="guidtSQLtToolsPackageCmdSet" id="ProjSettingsID" priority="0x100">
       <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_BUILD"/>
       <!--<Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_UNLOADRELOAD" /> -->
     </CommandPlacement>
 
-    <CommandPlacement guid="guidTSQLtToolsPackageCmdSet" id="addNewTestId" priority="0x100">
-      <Parent guid="guidTSQLtToolsPackageCmdSet" id="ItemCtxGroup"/>
+    <CommandPlacement guid="guidtSQLtToolsPackageCmdSet" id="addNewTestId" priority="0x100">
+      <Parent guid="guidtSQLtToolsPackageCmdSet" id="ItemCtxGroup"/>
     </CommandPlacement>
     
-    <CommandPlacement guid="guidTSQLtToolsPackageCmdSet" id="PushItemID" priority="0x100">
-      <Parent guid="guidTSQLtToolsPackageCmdSet" id="ItemCtxGroup"/>
+    <CommandPlacement guid="guidtSQLtToolsPackageCmdSet" id="PushItemID" priority="0x100">
+      <Parent guid="guidtSQLtToolsPackageCmdSet" id="ItemCtxGroup"/>
     </CommandPlacement>
 
   </CommandPlacements>
@@ -117,10 +117,10 @@
 
   <Symbols>
     <!-- This is the package guid. -->
-    <GuidSymbol name="guidTSQLtToolsPackage" value="{8d5deb5f-75bb-4956-b1aa-831898433f36}" />
+    <GuidSymbol name="guidtSQLtToolsPackage" value="{8d5deb5f-75bb-4956-b1aa-831898433f36}" />
     
     <!-- This is the guid used to group the menu commands together -->
-    <GuidSymbol name="guidTSQLtToolsPackageCmdSet" value="{dc07a335-c898-44a0-a612-9a8ed3d9dec4}">
+    <GuidSymbol name="guidtSQLtToolsPackageCmdSet" value="{dc07a335-c898-44a0-a612-9a8ed3d9dec4}">
       <IDSymbol name="ToolMenuGroup" value="0x1020" />
       <IDSymbol name="addNewTestId" value="0x0100" />
       <IDSymbol name="addUnitTestProjectId" value="0x0101" />

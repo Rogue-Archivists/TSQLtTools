@@ -7,11 +7,11 @@ using EnvDTE;
 using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
 
-namespace TSQLtTools
+namespace tSQLtTools
 {
     public static class ProjectHelpers
     {
-        private static readonly DTE2 _dte = TSQLtToolsPackage._dte;
+        private static readonly DTE2 _dte = tSQLtToolsPackage._dte;
 
         public static void CheckFileOutOfSourceControl(string file)
         {

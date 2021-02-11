@@ -7,7 +7,7 @@ The goal here it to get two SSDT projects to match on a sub set of options
 
 actor "User" as user
 boundary "Visual Studio UI" as vs
-control "TSQLtTools" as ex
+control "tSQLtTools" as ex
 control "Solution Explorer" as sln
 
 user -> vs ++ #FFBBBB: match projects

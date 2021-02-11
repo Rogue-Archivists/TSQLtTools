@@ -16,8 +16,8 @@
     <ProjectGuid>{7CBB7825-917D-47E5-9C68-4CB99F1510A7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TSQLtToolsTemplates</RootNamespace>
-    <AssemblyName>TSQLtToolsTemplates</AssemblyName>
+    <RootNamespace>tSQLtToolsTemplates</RootNamespace>
+    <AssemblyName>tSQLtToolsTemplates</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>

@@ -8,10 +8,10 @@ using EnvDTE80;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using TSQLtTools.Command;
+using tSQLtTools.Command;
 using Task = System.Threading.Tasks.Task;
 
-namespace TSQLtTools
+namespace tSQLtTools
 {
 
     class Constants
@@ -39,19 +39,19 @@ namespace TSQLtTools
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About
-    [Guid(PackageGuids.guidTSQLtToolsPackageString)]
+    [Guid(PackageGuids.guidtSQLtToolsPackageString)]
     [ProvideAutoLoad(VSConstants.UICONTEXT.SolutionExistsAndFullyLoaded_string, PackageAutoLoadFlags.BackgroundLoad)]
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
     [ProvideMenuResource("Menus.ctmenu", 1)]
-    public sealed class TSQLtToolsPackage : AsyncPackage
+    public sealed class tSQLtToolsPackage : AsyncPackage
     {
         public static DTE2 _dte;
-        public static TSQLtToolsPackage _instance;
+        public static tSQLtToolsPackage _instance;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TSQLtToolsPackage"/> class.
+        /// Initializes a new instance of the <see cref="tSQLtToolsPackage"/> class.
         /// </summary>
-        public TSQLtToolsPackage()
+        public tSQLtToolsPackage()
         {
             // internal setup on background thread 
             // NOTE: *no* VS Resources my be used
@@ -110,7 +110,7 @@ namespace TSQLtTools
 
         private async Task<object> CreatetSQLtToolsServiceAsync(IAsyncServiceContainer container, CancellationToken cancellationToken, Type serviceType)
         {
-            var svc = new TSQLtToolsService();
+            var svc = new tSQLtToolsService();
             await svc.InitializeAsync(this, cancellationToken);
             return svc;
         }

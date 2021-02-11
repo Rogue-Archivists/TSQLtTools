@@ -1,16 +1,16 @@
-# TSQLt Tools
+# tSQLt Tools
   - [Features](#features)
   - [Dependencies](#dependencies)
   - [Setup](#setup)
   - [Quick Use](#quick-use)
     - [New Solution](#new-solution)
     - [Add to Existing Projects](#add-to-existing-projects)
-  - [What is TSQLt](#what-is-tsqlt)
-  - [TSQLt Test Adapter](#tsqlt-test-adapter)
+  - [What is tSQLt](#what-is-tsqlt)
+  - [tSQLt Test Adapter](#tsqlt-test-adapter)
   - [Configuring a Database Solution](#configuring-a-database-solution)
   - [Appendix](#appendix)
 
-Just a few tools to make using [TSQLt](https://tsqlt.org) easier for database unit tests in Visual Studio SQL Projects. 
+Just a few tools to make using [tSQLt](https://tsqlt.org) easier for database unit tests in Visual Studio SQL Projects. 
 The Goal is to make SQL unit testing as much like C# just in TSQL. No GUI with code behind and clicking just code.
 
 This allow the developer test in isolation any structural change to tables or stored procedures refactors for correctness before committing code.
@@ -26,22 +26,22 @@ This allow the developer test in isolation any structural change to tables or st
 
 * Visual Studio 2017/2019 (VS)
 * LocalDB (part of must VS installs)
-* [TSQLt Test Runner Adapter](https://marketplace.visualstudio.com/items?itemName=vs-publisher-263684.GoEddietSQLt2019)  by Ed Elliott
+* [tSQLt Test Runner Adapter](https://marketplace.visualstudio.com/items?itemName=vs-publisher-263684.GoEddietSQLt2019)  by Ed Elliott
 
 ## Setup
 
 1. add the local extension feed to visual studio
-2. install the extension "TSQLt Tools"
+2. install the extension "tSQLt Tools"
 
 ## Quick Use
 
 ### New Solution
 
-1. File > New Solution > SQL > TSQLt Solution
+1. File > New Solution > SQL > tSQLt Solution
 
 ### Add to Existing Projects
 
-1. Solution > Add Project > SQL > Unit Test > TSQLt
+1. Solution > Add Project > SQL > Unit Test > tSQLt
 2. Name "_SomeProject_.Test"
 3. "_SomeProject_" > References > right-click > add "Database Reference"
 4. In Projects
@@ -50,7 +50,7 @@ This allow the developer test in isolation any structural change to tables or st
 
 5. as needed "_SomeProject_" > database Item > Add Unit test
 
-## What is TSQLt
+## What is tSQLt
 
 TSQL is a SQL Server CLR (database plug-in) that adds a unit testing framework to SQL Server database. This includes, but not limited to:
 
@@ -68,16 +68,16 @@ All of this has been bundled up into a database reference (.dacpack file) and th
     }
 ```
 
-## TSQLt Test Adapter
+## tSQLt Test Adapter
 
-To Perform database unit test with TSQLT we need Visual Studio to do the following:
+To Perform database unit test with tSQLt we need Visual Studio to do the following:
 
 1. Visual Studio can create the project database, with all developer changes
 2. Publish to a database
 3. Run unit tests _in the database as queries_
 4. returned the result and displayed in query explorer.
 
-Steps #1, #2 and #4 are part of Visual Studio. Step #3 is implemented by _TSQLt Test Runner Adapter_ by Ed Elliott.
+Steps #1, #2 and #4 are part of Visual Studio. Step #3 is implemented by _tSQLt Test Runner Adapter_ by Ed Elliott.
 
 The extension provides the following:
 
@@ -118,15 +118,15 @@ It is important to remember that:
 
 ## Configuring a Database Solution
 
-The diagram below illustrates the logical dependencies SQL Project `SomeProject.Test` has on `SomeProject` and `TSQLt`.
+The diagram below illustrates the logical dependencies SQL Project `SomeProject.Test` has on `SomeProject` and `tSQLt`.
 
 ```plantuml
-    database TSQLt as tsqlt
+    database tSQLt as tsqlt
     database "Master" as sys
     database "//SomeProject//" as proj
 
     database "//SomeProject//.test" as test
-    rectangle "TSQLt.dll" <<CLR>> as clr
+    rectangle "tSQLt.dll" <<CLR>> as clr
 
     clr <-- tsqlt : <<uses>>
     sys <-- tsqlt: <<uses>>
@@ -135,10 +135,10 @@ The diagram below illustrates the logical dependencies SQL Project `SomeProject.
 
     proj <|-- test: <<includes>>
     tsqlt <|--  test: <<includes>>
-caption: Logical Dependencies in a TSQLt SQL Project
+caption: Logical Dependencies in a tSQLt SQL Project
 ```
 
-The database reference to `TSQLt` *should* be satisfied by a reference to <pre>\\\\<build_server>\build\Reference\Dacpacs\tSQLt\\\$sql_target\$\\tSQLt.dacpac</pre> where `$sql_target` is target engine version for the project. Since the unit testing framework is included in the DACPAK there is no need to install the library local a rebuild will pull the latest CLR DLL with the DPACK at build time.
+The database reference to `tSQLt` *should* be satisfied by a reference to <pre>\\\\<build_server>\build\Reference\Dacpacs\tSQLt\\\$sql_target\$\\tSQLt.dacpac</pre> where `$sql_target` is target engine version for the project. Since the unit testing framework is included in the DACPAK there is no need to install the library local a rebuild will pull the latest CLR DLL with the DPACK at build time.
 
 ## Appendix
 
@@ -166,7 +166,7 @@ This project structure dependes on database refrences using _same database_ mode
         }
     }
 
-    rectangle "TSQLt CLR" <<CLR>> as clr
+    rectangle "tSQLt CLR" <<CLR>> as clr
 
     sys <-- tsqlt: <<uses>>
     clr <-- tsqlt : <<uses>>

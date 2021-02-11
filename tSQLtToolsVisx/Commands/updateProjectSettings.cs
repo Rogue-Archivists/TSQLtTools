@@ -6,7 +6,7 @@ using System;
 using System.ComponentModel.Design;
 using Task = System.Threading.Tasks.Task;
 
-namespace TSQLtTools.Command
+namespace tSQLtTools.Command
 {
     /// <summary>
     /// Command handler
@@ -30,7 +30,7 @@ namespace TSQLtTools.Command
             _dte = await package.GetServiceAsync(typeof(DTE)) as DTE2;
             Assumes.Present(_dte);
 
-            var cmdId = new CommandID(PackageGuids.guidTSQLtToolsPackageCmdSet, PackageIds.ProjSettingsID);
+            var cmdId = new CommandID(PackageGuids.guidtSQLtToolsPackageCmdSet, PackageIds.ProjSettingsID);
             var cmd = new MenuCommand(Execute, cmdId);
             menuCommandService.AddCommand(cmd);
         }
