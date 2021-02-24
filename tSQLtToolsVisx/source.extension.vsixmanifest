@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="a5b0936b-aa04-472b-8b11-776c2dbbc077" Version="0.6.6" Language="en-US" Publisher="Rogue-Archivists" />
+        <Identity Id="a5b0936b-aa04-472b-8b11-776c2dbbc077" Version="0.6.7" Language="en-US" Publisher="Rogue-Archivists" />
         <DisplayName>tSQLt Tools</DisplayName>
         <Description xml:space="preserve">Just a few tools to make using [tSQLt ](https://tsqlt.org) easier for database unit tests in Visual Studio SQL Projects. 
 The Goal is to make SQL unit testing as much like C# just in TSQL. 

@@ -12,7 +12,7 @@
     <OutputType>Database</OutputType>
     <RootPath></RootPath>
     <!-- cause the build to use an in-memory model -->
-    <CmdLineInMemoryStorage>true</CmdLineInMemoryStorage>
+    <CmdLineInMemoryStorage>True</CmdLineInMemoryStorage>
     <RootNamespace>$safeprojectname$</RootNamespace>
     <AssemblyName>$safeprojectname$</AssemblyName>
     <ModelCollation>1033,CI</ModelCollation>
@@ -94,7 +94,7 @@
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>
+    <RunSqlCodeAnalysis>False</RunSqlCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
